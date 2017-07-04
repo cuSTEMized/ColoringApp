@@ -1,128 +1,159 @@
-html, body{
-    padding: 0px;
-    margin: 0px;
-    font-family: Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: "From Where You Are";
+  src: url('../fonts/FromWhereYouAre.ttf?1412021660') format('truetype');
 }
-.clearfix{
-    padding: 0px;
-    margin: 0px;
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
+/* line 16, ../sass/partials/_base.scss */
+html, body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "From Where You Are", Helvetica, Arial, sans-serif;
 }
 
+/* line 22, ../sass/partials/_base.scss */
+body, nav {
+  background-image: url("../icons/wood_tile.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+/* line 28, ../sass/partials/_base.scss */
+.clearfix {
+  padding: 0px;
+  margin: 0px;
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+/* line 37, ../sass/partials/_base.scss */
 nav {
-    margin: 0px;
-    width: 76px;
-    padding: 6px;
-    height: 100%;
-    
-    color: white;	
-    background-image: url("../icons/paper_tile_grey.jpg");
-    background-repeat: repeat-y;
-    
-    overflow: auto;
-    position: fixed;
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 1;
-}
-nav.left {    
-    border-right: 2px solid black;
-    left: 0;
-}
-nav.right {    
-    border-left: 2px solid black;
-    right: 0;
+  margin: 0px;
+  width: 76px;
+  padding: 6px;
+  height: 100%;
+  color: white;
+  overflow: auto;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
 }
 
+/* line 51, ../sass/partials/_base.scss */
+nav.left {
+  border-right: 2px solid black;
+  left: 0;
+}
+
+/* line 55, ../sass/partials/_base.scss */
+nav.right {
+  border-left: 2px solid black;
+  right: 0;
+}
+
+/* line 60, ../sass/partials/_base.scss */
 button {
-   width: 64px;
-   height: 64px;
-   text-align: center;
-   background-color: transparent;
-   border: none;
-   margin: 6px;
-   padding: 0px;
-
-   -webkit-transition: all 100ms ease-in;
-   -moz-transition: all 100ms ease-in;
-   transition: all 100ms ease-in;
+  width: 64px;
+  height: 64px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  margin: 6px;
+  padding: 0px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
 }
 
 /* Fullscreen */
+/* line 75, ../sass/partials/_base.scss */
 body.fullscreen {
-    overflow: hidden; }
+  overflow: hidden;
+}
+
+/* line 77, ../sass/partials/_base.scss */
 body.fullscreen article {
-    position: absolute;
-    overflow: hidden;
-    width: auto;
-    padding: 0;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    margin-bottom: 0; }
+  position: absolute;
+  overflow: hidden;
+  width: auto;
+  padding: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 0;
+}
+
+/* line 87, ../sass/partials/_base.scss */
 body.fullscreen article .paperscript {
-    height: 100%;
-    margin-bottom: 0; }
+  height: 100%;
+  margin-bottom: 0;
+}
+
+/* line 90, ../sass/partials/_base.scss */
 body.fullscreen article .canvas,
 body.fullscreen article canvas[resize] {
-    width: 100%;
-    height: 100%; }
-
+  width: 100%;
+  height: 100%;
+}
 
 /* Color box */
-input{
-    visibility:hidden;
-    margin: 0px;
-    padding: 0px;
-    width: 0px;
-    height: 0px;
-    display: none;
+/* line 97, ../sass/partials/_base.scss */
+input {
+  visibility: hidden;
+  margin: 0px;
+  padding: 0px;
+  width: 0px;
+  height: 0px;
+  display: none;
 }
+
+/* line 105, ../sass/partials/_base.scss */
 .colorBox {
-    float: left;
-
-    display:inline-block;
-    width: 62px;
-    height: 62px;
-    border-radius: 25px;
-
-    border: 2px solid black;
-    /*border: 1px solid black;*/
-
-    cursor:pointer;
-
-    margin: 6px; 
-    padding: 0px;
-    
-    -webkit-transition: all 100ms ease-in;
-    -moz-transition: all 100ms ease-in;
-    transition: all 100ms ease-in;
+  float: left;
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  border-radius: 25px;
+  border: 2px solid black;
+  /*border: 1px solid black;*/
+  cursor: pointer;
+  margin: 6px;
+  padding: 0px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
 }
+
+/* line 125, ../sass/partials/_base.scss */
 #paletteBox {
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-#paletteBox input{
-    margin:0;padding:0;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-input:checked +.colorBox{
-    -webkit-filter: none;
-    -moz-filter: none;
-    filter: none;
-    border: 2px solid white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-article {	     
-    cursor: pointer;
-    position: relative;
-    padding: 0px 76px;
-    z-index: 0;
+/* line 130, ../sass/partials/_base.scss */
+#paletteBox input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* line 136, ../sass/partials/_base.scss */
+input:checked + .colorBox {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+  border: 2px solid white;
+}
+
+/* line 143, ../sass/partials/_base.scss */
+article {
+  cursor: pointer;
+  position: relative;
+  padding: 0px 76px;
+  z-index: 0;
 }
