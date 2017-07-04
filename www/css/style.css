@@ -223,19 +223,20 @@ ul {
   border-radius: 1.5rem;
   background: #FFCEBF;
   display: none;
-  padding: 1.5rem;
+  height: 80%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
   z-index: 10;
 }
-/* line 13, ../sass/partials/_modal.scss */
+/* line 14, ../sass/partials/_modal.scss */
 .modal.modal-is-visible {
   display: block;
 }
 
-/* line 18, ../sass/partials/_modal.scss */
+/* line 19, ../sass/partials/_modal.scss */
 .cover {
   display: none;
   position: fixed;
@@ -246,13 +247,25 @@ ul {
   height: 100%;
   z-index: 5;
 }
-/* line 28, ../sass/partials/_modal.scss */
+/* line 29, ../sass/partials/_modal.scss */
 .cover.modal-is-visible {
   display: block;
 }
 
-/* line 33, ../sass/partials/_modal.scss */
-.modal:target, .modal:target + .cover {
-  display: block;
-  opacity: 2;
+/* line 34, ../sass/partials/_modal.scss */
+.modal-header {
+  background-color: #F58765;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* line 39, ../sass/partials/_modal.scss */
+.modal-content {
+  max-height: 80%;
+  overflow: scroll;
+}
+
+/* line 44, ../sass/partials/_modal.scss */
+.modal-header, .modal-content {
+  padding: .5rem 1.5rem;
+  top: 0;
 }
