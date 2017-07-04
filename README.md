@@ -17,5 +17,8 @@ cordova plugin add cordova-plugin-splashscreen
 cordova build ios
 cordova emulate ios
 ```
-# Generate splash screen
+## Generate splash screen
 https://github.com/AlexDisler/cordova-splash
+
+## Generate icon
+https://github.com/AlexDisler/cordova-icon
