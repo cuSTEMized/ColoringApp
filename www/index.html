@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="js/svg-injector.min.js"></script>
     </head>
     <body>
-	<nav class="left">
+	<nav id="navleft" class="left">
 	    <button onclick="info()"><img src="icons/lightbulb.svg"/></button>
 	    <button onclick="zoomOut()"><img src="icons/zoomout.svg"/></button>
 	    <button onclick="zoomIn()"><img src="icons/zoomin.svg"/></button>
@@ -25,23 +25,37 @@
 	     }
 	    </script>
 	</nav>
-	<nav class="right">
+	<nav id="navright" class="right">
 	    <div id="paletteBox">
 	    </div>
 	</nav>
-	<article>
+	
+	<article id="canvasmain">
 	    <div align="center">
-
 		<img class="inject-me" src="img/3Dprinter.svg">		
-
 	    </div>
-	</article>	    
+	</article>
+	
     </body>
 
     <script type="text/javascript">
      document.addEventListener('deviceready', this.onDeviceReady, false);
      document.body.onload = function(){ onDeviceReady() };
      var color = ""; // global
+
+     function setSize() {
+	 var height = $(window).height();
+	 var width = $(window).width();
+	 console.log(height);
+	 console.log(width);
+
+	 $("article").css('width', height);
+	 $("article").css('height', height);
+	 $("article").css('left', (width-height)/2);
+	 $("nav.left").css('width', (width-height)/2-50);
+	 $("nav.right").css('width', (width-height)/2-50);
+	 
+     }
      
      function createPaletteBox() {
 	 // Create palette box
@@ -90,8 +104,11 @@
      }
 
      function onDeviceReady() {
+	 // Set size
+	 setSize();
+	 
 	 // Create color pallete box
-	 createPaletteBox()	 
+	 createPaletteBox();
 	 
 	 // Elements to inject
 	 var mySVGsToInject = document.querySelectorAll('img.inject-me');
