@@ -2,21 +2,23 @@
   font-family: "From Where You Are";
   src: url('../fonts/FromWhereYouAre.ttf?1412021660') format('truetype');
 }
-/* line 16, ../sass/partials/_base.scss */
+/* line 11, ../sass/partials/_base.scss */
 html, body {
-  padding: 0px;
-  margin: 0px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
   font-family: "From Where You Are", Helvetica, Arial, sans-serif;
 }
 
-/* line 22, ../sass/partials/_base.scss */
-body, nav {
+/* line 18, ../sass/partials/_base.scss */
+body {
   background-image: url("../icons/wood_tile.jpg");
   background-repeat: repeat;
   background-size: contain;
+  color: #502A00;
 }
 
-/* line 28, ../sass/partials/_base.scss */
+/* line 25, ../sass/partials/_base.scss */
 .clearfix {
   padding: 0px;
   margin: 0px;
@@ -26,7 +28,7 @@ body, nav {
   height: 0;
 }
 
-/* line 37, ../sass/partials/_base.scss */
+/* line 34, ../sass/partials/_base.scss */
 nav {
   margin: 0px;
   width: 76px;
@@ -40,27 +42,30 @@ nav {
   z-index: 1;
 }
 
-/* line 51, ../sass/partials/_base.scss */
+/* line 48, ../sass/partials/_base.scss */
 nav.left {
   border-right: 2px solid black;
   left: 0;
 }
 
-/* line 55, ../sass/partials/_base.scss */
+/* line 52, ../sass/partials/_base.scss */
 nav.right {
   border-left: 2px solid black;
   right: 0;
 }
 
-/* line 60, ../sass/partials/_base.scss */
-button {
-  width: 64px;
-  height: 64px;
+/* line 57, ../sass/partials/_base.scss */
+.button {
+  color: #FFF;
+  width: 4rem;
+  height: 4rem;
   text-align: center;
   background-color: transparent;
-  border: none;
-  margin: 6px;
-  padding: 0px;
+  border: solid #FFF 0.25rem;
+  border-radius: 1.5rem;
+  margin: 2.5rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
   -webkit-transition: all 100ms ease-in;
   -moz-transition: all 100ms ease-in;
   transition: all 100ms ease-in;
@@ -156,4 +161,98 @@ article {
   position: relative;
   padding: 0px 76px;
   z-index: 0;
+}
+
+/* line 150, ../sass/partials/_base.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1, ../sass/partials/_start.scss */
+.start {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/start.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
+/* line 10, ../sass/partials/_start.scss */
+.start .nav-bar {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+/* line 17, ../sass/partials/_start.scss */
+.start .nav-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 22, ../sass/partials/_start.scss */
+.start .nav-item {
+  display: inline;
+  font-size: 1.5rem;
+}
+/* line 26, ../sass/partials/_start.scss */
+.start .nav-item #go {
+  background-color: #FDCA31;
+}
+/* line 30, ../sass/partials/_start.scss */
+.start .nav-item #about {
+  background-color: #F58765;
+}
+
+/* line 35, ../sass/partials/_start.scss */
+.start .title-text {
+  color: #FFF;
+  font-size: 2.5rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 1, ../sass/partials/_modal.scss */
+.modal {
+  border: 0.25rem solid #F58765;
+  border-radius: 1.5rem;
+  background: #FFCEBF;
+  display: none;
+  padding: 1.5rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+/* line 13, ../sass/partials/_modal.scss */
+.modal.modal-is-visible {
+  display: block;
+}
+
+/* line 18, ../sass/partials/_modal.scss */
+.cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(75, 75, 75, 0.6);
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* line 28, ../sass/partials/_modal.scss */
+.cover.modal-is-visible {
+  display: block;
+}
+
+/* line 33, ../sass/partials/_modal.scss */
+.modal:target, .modal:target + .cover {
+  display: block;
+  opacity: 2;
 }

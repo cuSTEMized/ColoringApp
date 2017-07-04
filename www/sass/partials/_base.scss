@@ -1,11 +1,6 @@
 @import "compass";
 @include font-face("From Where You Are", font-files("FromWhereYouAre.ttf"));
 
-// Font Weights
-$light: 100;
-$regular: 400;
-$bold: 600;
-
 // Base Font
 $base-font-family: "From Where You Are", Helvetica, Arial, sans-serif;
 $base-font-size: 1rem;
@@ -14,15 +9,17 @@ $base-font-size: 1rem;
 
 // Default
 html, body{
-    padding: 0px;
-    margin: 0px;
+    height: 100%;
+    padding: 0;
+    margin: 0;
     font-family: $base-font-family;
 }
 
-body, nav {
+body {
   background-image: url("../icons/wood_tile.jpg");
   background-repeat: repeat;
   background-size: contain;
+  color: $saddle-brown;
 }
 
 .clearfix{
@@ -57,14 +54,17 @@ nav.right {
     right: 0;
 }
 
-button {
-   width: 64px;
-   height: 64px;
+.button {
+   color: $white;
+   width: 4rem;
+   height: 4rem;
    text-align: center;
    background-color: transparent;
-   border: none;
-   margin: 6px;
-   padding: 0px;
+   border: solid $white .25rem;
+   border-radius: 1.5rem;
+   margin: 2.5rem;
+   padding: .5rem 1rem;
+   text-decoration: none;
 
    -webkit-transition: all 100ms ease-in;
    -moz-transition: all 100ms ease-in;
@@ -145,4 +145,10 @@ article {
     position: relative;
     padding: 0px 76px;
     z-index: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
