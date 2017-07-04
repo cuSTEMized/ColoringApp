@@ -2,28 +2,15 @@
 <html>
     <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<!-- <script type="text/javascript" src="cordova.js"></script> -->
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="js/svg-injector.min.js"></script>
     </head>
     <body>
 	<nav id="navleft" class="left">
-	    <button onclick="info()"><img src="icons/lightbulb.svg"/></button>
-	    <button onclick="zoomOut()"><img src="icons/zoomout.svg"/></button>
-	    <button onclick="zoomIn()"><img src="icons/zoomin.svg"/></button>
-	    <!-- <button onclick="fillPalette()"><img src="icons/colors.svg"/></button> -->
-	    <div id="test"></div>
-	    
-	    <script>
-	     function zoomOut(){
-		 cw = parseFloat(document.getElementById('main').getAttribute('width'))
-		 document.getElementById('main').setAttribute('width', cw-10+'%')
-	     }
-	     function zoomIn(){
-		 cw = parseFloat(document.getElementById('main').getAttribute('width'))
-		 document.getElementById('main').setAttribute('width', cw+10+'%')
-	     }
-	    </script>
+	    <button class="btn" onclick="info()"><img class="inject-me" src="icons/lightbulb.svg" width=100% height=100%/></button>
+	    <button class="btnhalf"><img class="inject-me" src="icons/pencil.svg" width=100% height=100%/></button>
+	    <button class="btnhalf" onclick="erase()"><img class="inject-me" src="icons/eraser.svg" width=100% height=100%/></button>
+	    <button class="btn" onclick="save()"><img class="inject-me" src="icons/download.svg" width=100% height=100%/></button>
 	</nav>
 	<nav id="navright" class="right">
 	    <div id="paletteBox">
@@ -43,6 +30,10 @@
      document.body.onload = function(){ onDeviceReady() };
      var color = ""; // global
 
+     function erase() {
+	 color = "white";
+     }
+
      function setSize() {
 	 var height = $(window).height();
 	 var width = $(window).width();
@@ -54,7 +45,12 @@
 	 $("article").css('left', (width-height)/2);
 	 $("nav.left").css('width', (width-height)/2-50);
 	 $("nav.right").css('width', (width-height)/2-50);
+
+	 $(".btn").css('width', (width-height)/2-60);
+	 $(".btn").css('height', (width-height)/2-60);
 	 
+	 $(".btnhalf").css('width', (width-height)/2-60);
+	 $(".btnhalf").css('height', (width-height)/3-60);	 
      }
      
      function createPaletteBox() {
@@ -67,10 +63,8 @@
 	 for (var i = 0; i < colors.length; i++) {
 	     d = document.getElementById("paletteBox").innerHTML
 	     document.getElementById("paletteBox").innerHTML = d + '<input type="radio" name="color" value="' + colors[i
-	     ] +'" id="' + i + '"/><label class="colorBox" for="' + i + '" style="background-color:' + colors[i] + '"></label>'
+	     ] +'" id="' + i + '"/><label class="btn colorBox" for="' + i + '" style="background-color:' + colors[i] + '"></label>'
 	 }
-	 d = document.getElementById("paletteBox").innerHTML
-	 //document.getElementById("paletteBox").innerHTML = d + '<input checked=true type="radio" name="color" value="black" id="defaultColor"/><label class="colorBox" for="defaultColor" style="background-color:black"></label>'
      }
 
      function coloring() {
@@ -78,7 +72,11 @@
 	 color = colors[0];
 	 $('input:radio[name=color]').change(function () {
 	     color = $(this).val();
-	     console.log(color);
+	     // Change color of pencil
+	     $("#pencil").css({fill: color}) 
+	     $("#pencil-tip").css({fill: color}) 
+	     $("#pencil-eraser").css({fill: color}) 
+	     // console.log(color);
 	 });
 
 	 $("path, polygon, circle, rect").on('click touchstart',function(){
@@ -104,12 +102,6 @@
      }
 
      function onDeviceReady() {
-	 // Set size
-	 setSize();
-	 
-	 // Create color pallete box
-	 createPaletteBox();
-	 
 	 // Elements to inject
 	 var mySVGsToInject = document.querySelectorAll('img.inject-me');
 	 // Options
@@ -127,6 +119,12 @@
 	     // Callback after all SVGs are injected
 	     console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
 	 });
+	 
+	 // Create color pallete box
+	 createPaletteBox();
+	 
+	 // Set size
+	 setSize();	 
      };
     </script>
 </html>

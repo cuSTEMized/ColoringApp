@@ -32,24 +32,35 @@ nav {
 nav.left {    
     border-right: 2px solid black;
     left: 0;
+    padding: 0px;
+    margin: 0px;
 }
 nav.right {    
     border-left: 2px solid black;
     right: 0;
+    padding: 10px;
+    margin: 0px;
 }
 
-button {
+.btn,
+.btnhalf {
    width: 64px;
    height: 64px;
-   text-align: center;
-   background-color: transparent;
-   border: none;
-   margin: 6px;
-   padding: 0px;
-
+   
    -webkit-transition: all 100ms ease-in;
    -moz-transition: all 100ms ease-in;
    transition: all 100ms ease-in;
+   
+   cursor:pointer;
+
+   padding: 0px;   
+}
+
+button {
+   text-align: center;
+   background-color: transparent;
+   margin: 10px 10px 10px 0px;
+   border: 0px;
 }
 
 /* Fullscreen */
@@ -84,24 +95,11 @@ input{
     display: none;
 }
 .colorBox {
-    float: left;
-
-    display:inline-block;
-    width: 62px;
-    height: 62px;
-    border-radius: 25px;
-
     border: 2px solid black;
-    /*border: 1px solid black;*/
-
-    cursor:pointer;
-
-    margin: 6px; 
-    padding: 0px;
-    
-    -webkit-transition: all 100ms ease-in;
-    -moz-transition: all 100ms ease-in;
-    transition: all 100ms ease-in;
+    float: left;
+    display:inline-block;
+    border-radius: 25px;
+    margin: 5px; 
 }
 #paletteBox {
     -webkit-appearance:none;
