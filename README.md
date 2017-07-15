@@ -42,6 +42,10 @@ cordova plugin add cordova-plugin-splashscreen
 cordova build ios
 cordova emulate ios
 ```
+
 # Generate splash screen
 https://github.com/AlexDisler/cordova-splash
+
+# Compilling scss
+http://compass-style.org/help/
 
