@@ -1,0 +1,47 @@
+.modal {
+  border: .25rem solid $salmon;
+  border-radius: 1.5rem;
+  background: $light-salmon;
+  display: none;
+  height: 80%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 10;
+
+  &.modal-is-visible {
+    display: block;
+  }
+}
+
+.cover {
+  display: none;
+  position:fixed;
+  top:0;
+  left:0;
+  background:rgba($modal-grey,0.6);
+  width:100%;
+  height:100%;
+  z-index:5;
+
+  &.modal-is-visible {
+    display: block;
+  }
+}
+
+.modal-header {
+  background-color: $salmon;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.modal-content {
+  max-height: 80%;
+  overflow: scroll;
+}
+
+.modal-header, .modal-content {
+  padding: .5rem 1.5rem;
+  top: 0;
+}

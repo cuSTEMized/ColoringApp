@@ -3,3 +3,5 @@ old/
 node_modules/
 plugins/
 platforms/
+.sass-cache/
+Log.md
