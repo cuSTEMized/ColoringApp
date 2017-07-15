@@ -22,9 +22,10 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <splash height="290" src="splash.png" width="471" />
     <preference name="Orientation" value="landscape" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="2500" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="BackgroundColor" value="0xffffff00" />
     <engine name="android" spec="^6.2.3" />
