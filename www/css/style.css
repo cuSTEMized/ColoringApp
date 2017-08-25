@@ -1,6 +1,6 @@
 @font-face {
   font-family: "From Where You Are";
-  src: url('../fonts/FromWhereYouAre.ttf?1500114075') format('truetype');
+  src: url('../fonts/FromWhereYouAre.ttf?1412021660') format('truetype');
 }
 /* line 11, ../sass/partials/_base.scss */
 html, body {
@@ -222,7 +222,6 @@ ul {
   border: 0.25rem solid #F58765;
   border-radius: 1.5rem;
   background: #FFCEBF;
-  display: none;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -231,14 +230,9 @@ ul {
   width: 80%;
   z-index: 10;
 }
-/* line 14, ../sass/partials/_modal.scss */
-.modal.modal-is-visible {
-  display: block;
-}
 
-/* line 19, ../sass/partials/_modal.scss */
+/* line 18, ../sass/partials/_modal.scss */
 .cover {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -247,24 +241,24 @@ ul {
   height: 100%;
   z-index: 5;
 }
-/* line 29, ../sass/partials/_modal.scss */
+/* line 27, ../sass/partials/_modal.scss */
 .cover.modal-is-visible {
   display: block;
 }
 
-/* line 34, ../sass/partials/_modal.scss */
+/* line 32, ../sass/partials/_modal.scss */
 .modal-header {
   background-color: #F58765;
   border-radius: 1rem 1rem 0 0;
 }
 
-/* line 39, ../sass/partials/_modal.scss */
+/* line 37, ../sass/partials/_modal.scss */
 .modal-content {
   max-height: 80%;
   overflow: scroll;
 }
 
-/* line 44, ../sass/partials/_modal.scss */
+/* line 42, ../sass/partials/_modal.scss */
 .modal-header, .modal-content {
   padding: .5rem 1.5rem;
   top: 0;

@@ -2,7 +2,6 @@
   border: .25rem solid $salmon;
   border-radius: 1.5rem;
   background: $light-salmon;
-  display: none;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -12,12 +11,11 @@
   z-index: 10;
 
   &.modal-is-visible {
-    display: block;
+    // display: block;
   }
 }
 
 .cover {
-  display: none;
   position:fixed;
   top:0;
   left:0;
