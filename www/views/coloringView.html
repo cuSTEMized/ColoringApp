@@ -16,13 +16,13 @@
 	    <div id="paletteBox">
 	    </div>
 	</nav>
-	
+
 	<article id="canvasmain">
 	    <div align="center">
-		<img class="inject-me" src="img/3Dprinter.svg">		
+		<img class="inject-me" src="img/3Dprinter.svg">
 	    </div>
 	</article>
-	
+
     </body>
 
     <script type="text/javascript">
@@ -48,11 +48,11 @@
 
 	 $(".btn").css('width', (width-height)/2-60);
 	 $(".btn").css('height', (width-height)/2-60);
-	 
+
 	 $(".btnhalf").css('width', (width-height)/2-60);
-	 $(".btnhalf").css('height', (width-height)/3-60);	 
+	 $(".btnhalf").css('height', (width-height)/3-60);
      }
-     
+
      function createPaletteBox() {
 	 // Create palette box
 	 hair_colors = ['#2b2518','#925e30','#e2b72d','#b5330a']
@@ -73,9 +73,9 @@
 	 $('input:radio[name=color]').change(function () {
 	     color = $(this).val();
 	     // Change color of pencil
-	     $("#pencil").css({fill: color}) 
-	     $("#pencil-tip").css({fill: color}) 
-	     $("#pencil-eraser").css({fill: color}) 
+	     $("#pencil").css({fill: color})
+	     $("#pencil-tip").css({fill: color})
+	     $("#pencil-eraser").css({fill: color})
 	     // console.log(color);
 	 });
 
@@ -119,12 +119,12 @@
 	     // Callback after all SVGs are injected
 	     console.log('We injected ' + totalSVGsInjected + ' SVG(s)!');
 	 });
-	 
+
 	 // Create color pallete box
 	 createPaletteBox();
-	 
+
 	 // Set size
-	 setSize();	 
+	 setSize();
      };
     </script>
 </html>

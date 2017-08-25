@@ -21,19 +21,42 @@ var coloringApp = angular.module('coloringApp', ['ngRoute', 'angularModalService
 // Route Configurations
 coloringApp.config(function ($routeProvider, $locationProvider) {
   $routeProvider
+    // route for home page
     .when('/', {
       templateUrl: 'views/startView.html',
       controller: 'StartCtrl'
+    })
+
+    // route for main page
+    .when('/main', {
+      templateUrl: 'views/mainView.html',
+      controller: 'MainCtrl'
+    })
+
+    // route for coloring page
+    .when('/coloring', {
+      templateUrl: 'views/coloringView.html',
+      controller: 'ColoringCtrl'
+    })
+
+    // route for story page
+    .when('/story', {
+      templateUrl: 'views/storyView.html',
+      controller: 'StoryCtrl'
     });
+
   $routeProvider
     .otherwise({
       redirectTo: '/',
     });
+
+  $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('');
 });
 
 // === CONTROLLERS ===
 
-// Start
+// StartCtrl
 coloringApp.controller('StartCtrl', ['$scope', 'ModalService', function($scope, ModalService) {
   $scope.message = 'hello';
 
@@ -61,11 +84,26 @@ coloringApp.controller('StartCtrl', ['$scope', 'ModalService', function($scope, 
 
 }]);
 
-// Modal
+
 coloringApp.controller('ModalController', ['$scope', 'close', function($scope, close) {
   $scope.close = function(result) {
     $scope.display = true;
     close(result, 100);
   };
+
+}]);
+
+// MainCtrl
+coloringApp.controller('MainCtrl', ['$scope', function($scope) {
+
+}]);
+
+// ColoringCtrl
+coloringApp.controller('ColoringCtrl', ['$scope', function($scope) {
+
+}]);
+
+// StoryCtrl
+coloringApp.controller('StoryCtrl', ['$scope', function($scope) {
 
 }]);

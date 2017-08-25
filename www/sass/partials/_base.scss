@@ -22,6 +22,32 @@ body {
   color: $saddle-brown;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: .25rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+}
+
 .clearfix{
     padding: 0px;
     margin: 0px;
@@ -29,6 +55,16 @@ body {
     display: block;
     clear: both;
     height: 0;
+}
+
+.view {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  margin: 1rem 0;
+  text-align: center;
 }
 
 nav {
@@ -52,23 +88,6 @@ nav.left {
 nav.right {
     border-left: 2px solid black;
     right: 0;
-}
-
-.button {
-   color: $white;
-   width: 4rem;
-   height: 4rem;
-   text-align: center;
-   background-color: transparent;
-   border: solid $white .25rem;
-   border-radius: 1.5rem;
-   margin: 2.5rem;
-   padding: .5rem 1rem;
-   text-decoration: none;
-
-   -webkit-transition: all 100ms ease-in;
-   -moz-transition: all 100ms ease-in;
-   transition: all 100ms ease-in;
 }
 
 /* Fullscreen */
@@ -151,4 +170,22 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+// Navigation
+.nav-bar {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.nav-menu {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item {
+  display: inline-flex;
 }

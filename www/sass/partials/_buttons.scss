@@ -1,0 +1,39 @@
+// buttons
+.button {
+   color: $white;
+   text-align: center;
+   background-color: transparent;
+   box-shadow: 1px 1px 6px 0px $saddle-brown;
+   text-decoration: none;
+   margin: .5rem;
+   -webkit-transition: all 100ms ease-in;
+   -moz-transition: all 100ms ease-in;
+   transition: all 100ms ease-in;
+
+  &.close {
+    background: $salmon;
+  }
+
+  &.text-button {
+    border: solid $white .25rem;
+    width: 7rem;
+    // height: 2rem;
+    border-radius: 1.5rem;
+    margin: 0 1.5rem;
+    padding: .5rem 1rem;
+  }
+
+  &.icon-button {
+    border: .25rem solid $white;
+    border-radius: 50%;
+    height: 1.75rem;
+    margin: 0;
+    width: 1.75rem;
+  }
+
+  i {
+    font-size: 1.25rem;
+    padding: .25rem;
+    vertical-align: middle;
+  }
+}
