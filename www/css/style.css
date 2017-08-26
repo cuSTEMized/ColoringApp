@@ -1,6 +1,6 @@
 @font-face {
   font-family: "From Where You Are";
-  src: url('../fonts/FromWhereYouAre.ttf?1412021660') format('truetype');
+  src: url('/fonts/FromWhereYouAre.ttf') format('truetype');
 }
 /* line 11, ../sass/partials/_base.scss */
 html, body {
@@ -383,3 +383,5 @@ ul {
   height: 0;
   display: none;
 }
+
+/*# sourceMappingURL=style.css.map */

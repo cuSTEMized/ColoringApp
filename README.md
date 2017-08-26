@@ -49,3 +49,11 @@ https://github.com/AlexDisler/cordova-splash
 # Compilling scss
 http://compass-style.org/help/
 
+# Development
+To run the application locally, navigate to `Coloring-App`:
+
+```
+grunt serve
+```
+
+The application should open a browser window pointing to `localhost:8080`.
