@@ -2,7 +2,6 @@
   border: .25rem solid $salmon;
   border-radius: 1.5rem;
   background: $light-salmon;
-  display: none;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -12,12 +11,11 @@
   z-index: 10;
 
   &.modal-is-visible {
-    display: block;
+    // display: block;
   }
 }
 
 .cover {
-  display: none;
   position:fixed;
   top:0;
   left:0;
@@ -34,14 +32,19 @@
 .modal-header {
   background-color: $salmon;
   border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1.25rem;
 }
 
 .modal-content {
-  max-height: 80%;
-  overflow: scroll;
+  margin: .5rem .75rem;
+  max-height: 72%;
+  overflow: auto;
+  padding: .5rem;
 }
 
 .modal-header, .modal-content {
-  padding: .5rem 1.5rem;
   top: 0;
 }

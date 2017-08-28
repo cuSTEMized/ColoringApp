@@ -1,6 +1,6 @@
 @font-face {
   font-family: "From Where You Are";
-  src: url('../fonts/FromWhereYouAre.ttf?1500114075') format('truetype');
+  src: url('/fonts/FromWhereYouAre.ttf') format('truetype');
 }
 /* line 11, ../sass/partials/_base.scss */
 html, body {
@@ -19,6 +19,37 @@ body {
 }
 
 /* line 25, ../sass/partials/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: .25rem;
+}
+
+/* line 33, ../sass/partials/_base.scss */
+h1 {
+  font-size: 4rem;
+}
+
+/* line 37, ../sass/partials/_base.scss */
+h2 {
+  font-size: 2rem;
+}
+
+/* line 41, ../sass/partials/_base.scss */
+h4 {
+  font-size: 1.25rem;
+}
+
+/* line 45, ../sass/partials/_base.scss */
+p {
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 51, ../sass/partials/_base.scss */
 .clearfix {
   padding: 0px;
   margin: 0px;
@@ -28,7 +59,19 @@ body {
   height: 0;
 }
 
-/* line 34, ../sass/partials/_base.scss */
+/* line 60, ../sass/partials/_base.scss */
+.view {
+  height: 100%;
+  width: 100%;
+}
+
+/* line 65, ../sass/partials/_base.scss */
+header {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* line 70, ../sass/partials/_base.scss */
 nav {
   margin: 0px;
   width: 76px;
@@ -42,42 +85,25 @@ nav {
   z-index: 1;
 }
 
-/* line 48, ../sass/partials/_base.scss */
+/* line 84, ../sass/partials/_base.scss */
 nav.left {
   border-right: 2px solid black;
   left: 0;
 }
 
-/* line 52, ../sass/partials/_base.scss */
+/* line 88, ../sass/partials/_base.scss */
 nav.right {
   border-left: 2px solid black;
   right: 0;
 }
 
-/* line 57, ../sass/partials/_base.scss */
-.button {
-  color: #FFF;
-  width: 4rem;
-  height: 4rem;
-  text-align: center;
-  background-color: transparent;
-  border: solid #FFF 0.25rem;
-  border-radius: 1.5rem;
-  margin: 2.5rem;
-  padding: .5rem 1rem;
-  text-decoration: none;
-  -webkit-transition: all 100ms ease-in;
-  -moz-transition: all 100ms ease-in;
-  transition: all 100ms ease-in;
-}
-
 /* Fullscreen */
-/* line 75, ../sass/partials/_base.scss */
+/* line 94, ../sass/partials/_base.scss */
 body.fullscreen {
   overflow: hidden;
 }
 
-/* line 77, ../sass/partials/_base.scss */
+/* line 96, ../sass/partials/_base.scss */
 body.fullscreen article {
   position: absolute;
   overflow: hidden;
@@ -90,13 +116,13 @@ body.fullscreen article {
   margin-bottom: 0;
 }
 
-/* line 87, ../sass/partials/_base.scss */
+/* line 106, ../sass/partials/_base.scss */
 body.fullscreen article .paperscript {
   height: 100%;
   margin-bottom: 0;
 }
 
-/* line 90, ../sass/partials/_base.scss */
+/* line 109, ../sass/partials/_base.scss */
 body.fullscreen article .canvas,
 body.fullscreen article canvas[resize] {
   width: 100%;
@@ -104,7 +130,7 @@ body.fullscreen article canvas[resize] {
 }
 
 /* Color box */
-/* line 97, ../sass/partials/_base.scss */
+/* line 116, ../sass/partials/_base.scss */
 input {
   visibility: hidden;
   margin: 0px;
@@ -114,7 +140,7 @@ input {
   display: none;
 }
 
-/* line 105, ../sass/partials/_base.scss */
+/* line 124, ../sass/partials/_base.scss */
 .colorBox {
   float: left;
   display: inline-block;
@@ -131,14 +157,14 @@ input {
   transition: all 100ms ease-in;
 }
 
-/* line 125, ../sass/partials/_base.scss */
+/* line 144, ../sass/partials/_base.scss */
 #paletteBox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-/* line 130, ../sass/partials/_base.scss */
+/* line 149, ../sass/partials/_base.scss */
 #paletteBox input {
   margin: 0;
   padding: 0;
@@ -147,7 +173,7 @@ input {
   appearance: none;
 }
 
-/* line 136, ../sass/partials/_base.scss */
+/* line 155, ../sass/partials/_base.scss */
 input:checked + .colorBox {
   -webkit-filter: none;
   -moz-filter: none;
@@ -155,7 +181,7 @@ input:checked + .colorBox {
   border: 2px solid white;
 }
 
-/* line 143, ../sass/partials/_base.scss */
+/* line 162, ../sass/partials/_base.scss */
 article {
   cursor: pointer;
   position: relative;
@@ -163,52 +189,53 @@ article {
   z-index: 0;
 }
 
-/* line 150, ../sass/partials/_base.scss */
+/* line 169, ../sass/partials/_base.scss */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 1, ../sass/partials/_start.scss */
-.start {
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/start.png");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-/* line 10, ../sass/partials/_start.scss */
-.start .nav-bar {
+/* line 176, ../sass/partials/_base.scss */
+.nav-bar {
   bottom: 0;
   position: absolute;
   width: 100%;
   padding: 1.5rem 0;
 }
 
-/* line 17, ../sass/partials/_start.scss */
-.start .nav-menu {
+/* line 183, ../sass/partials/_base.scss */
+.nav-menu {
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
 }
 
-/* line 22, ../sass/partials/_start.scss */
+/* line 189, ../sass/partials/_base.scss */
+.nav-item {
+  display: inline-flex;
+}
+
+/* line 1, ../sass/partials/_start.scss */
+.start {
+  background-image: url("../img/start.png");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/* line 7, ../sass/partials/_start.scss */
 .start .nav-item {
-  display: inline;
   font-size: 1.5rem;
 }
-/* line 26, ../sass/partials/_start.scss */
+/* line 10, ../sass/partials/_start.scss */
 .start .nav-item #go {
   background-color: #FDCA31;
 }
-/* line 30, ../sass/partials/_start.scss */
+/* line 14, ../sass/partials/_start.scss */
 .start .nav-item #about {
   background-color: #F58765;
 }
-
-/* line 35, ../sass/partials/_start.scss */
+/* line 19, ../sass/partials/_start.scss */
 .start .title-text {
   color: #FFF;
   font-size: 2.5rem;
@@ -217,12 +244,31 @@ ul {
   width: 100%;
 }
 
+/* line 3, ../sass/partials/_main.scss */
+.main .nav-item {
+  font-size: 1rem;
+}
+/* line 7, ../sass/partials/_main.scss */
+.main .nav-item #home {
+  background: #48C1BB;
+  margin: 0 0 0 -1.5rem;
+  padding: 0 1rem;
+}
+/* line 12, ../sass/partials/_main.scss */
+.main .nav-item #home i {
+  font-size: 1.5rem;
+  vertical-align: bottom;
+}
+/* line 21, ../sass/partials/_main.scss */
+.main .nav-item:last-child {
+  flex: 0 0 50%;
+}
+
 /* line 1, ../sass/partials/_modal.scss */
 .modal {
   border: 0.25rem solid #F58765;
   border-radius: 1.5rem;
   background: #FFCEBF;
-  display: none;
   height: 80%;
   position: fixed;
   top: 50%;
@@ -231,14 +277,9 @@ ul {
   width: 80%;
   z-index: 10;
 }
-/* line 14, ../sass/partials/_modal.scss */
-.modal.modal-is-visible {
-  display: block;
-}
 
-/* line 19, ../sass/partials/_modal.scss */
+/* line 18, ../sass/partials/_modal.scss */
 .cover {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -247,25 +288,100 @@ ul {
   height: 100%;
   z-index: 5;
 }
-/* line 29, ../sass/partials/_modal.scss */
+/* line 27, ../sass/partials/_modal.scss */
 .cover.modal-is-visible {
   display: block;
 }
 
-/* line 34, ../sass/partials/_modal.scss */
+/* line 32, ../sass/partials/_modal.scss */
 .modal-header {
   background-color: #F58765;
   border-radius: 1rem 1rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1.25rem;
 }
 
-/* line 39, ../sass/partials/_modal.scss */
+/* line 41, ../sass/partials/_modal.scss */
 .modal-content {
-  max-height: 80%;
-  overflow: scroll;
+  margin: .5rem .75rem;
+  max-height: 72%;
+  overflow: auto;
+  padding: .5rem;
 }
 
-/* line 44, ../sass/partials/_modal.scss */
+/* line 48, ../sass/partials/_modal.scss */
 .modal-header, .modal-content {
-  padding: .5rem 1.5rem;
   top: 0;
 }
+
+/* line 2, ../sass/partials/_buttons.scss */
+.button {
+  color: #FFF;
+  text-align: center;
+  background-color: transparent;
+  box-shadow: 1px 1px 6px 0px #502A00;
+  text-decoration: none;
+  margin: .5rem;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+/* line 13, ../sass/partials/_buttons.scss */
+.button.close {
+  background: #F58765;
+}
+/* line 17, ../sass/partials/_buttons.scss */
+.button.text-button {
+  border: solid #FFF 0.25rem;
+  width: 7rem;
+  border-radius: 1.5rem;
+  margin: 0 1.5rem;
+  padding: .5rem 1rem;
+}
+/* line 26, ../sass/partials/_buttons.scss */
+.button.icon-button {
+  border: 0.25rem solid #FFF;
+  border-radius: 50%;
+  height: 1.75rem;
+  margin: 0;
+  width: 1.75rem;
+}
+/* line 34, ../sass/partials/_buttons.scss */
+.button i {
+  font-size: 1.25rem;
+  padding: .25rem;
+  vertical-align: middle;
+}
+
+/* line 1, ../sass/partials/_scrollbar.scss */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+/* line 5, ../sass/partials/_scrollbar.scss */
+::-webkit-scrollbar-track {
+  border-radius: .25rem;
+  background: #FFF;
+}
+
+/* line 10, ../sass/partials/_scrollbar.scss */
+::-webkit-scrollbar-thumb {
+  border-radius: .25rem;
+  background: #F58765;
+}
+
+/* line 15, ../sass/partials/_scrollbar.scss */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* line 19, ../sass/partials/_scrollbar.scss */
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

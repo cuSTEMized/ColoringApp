@@ -1,7 +1,10 @@
 *~
 old/
 node_modules/
+dist/
 plugins/
 platforms/
 .sass-cache/
+.tmp/
+bower_components/
 Log.md

@@ -1,7 +1,7 @@
 <html>
     <head>
         <!-- Cordova meta tags -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -11,43 +11,28 @@
 
         <!-- Scripts -->
         <!-- <script type="text/javascript" src="cordova.js"></script> -->
-        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
-        <script src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://use.fontawesome.com/2906dd2f3e.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+        <!-- <script src="./../node_modules/angular-modal-service/dst/angular-modal-service.min.js"></script> -->
+        <script src="js/angular-modal-service.min.js"></script>
+        <script src="js/index.js"></script>
 
         <title>Coloring with CuSTEMized</title>
+        <base href="/">
     </head>
-    <body>
-      <!-- Start Menu -->
-      <div class="start container">
 
-        <!-- Start Menu: Title Screen -->
-        <div class="title-text">
-          <h2>Your Colorful Adventure<h2>
-        </div>
-
-        <!-- Start Menu: Navigation Menu -->
-        <div class="nav-bar">
-          <ul class="nav-menu">
-            <li class="nav-item"><a href="#about" id="about" class="button">About</a></li>
-            <!-- <li class="nav-item"><a href="#go" id="go" class="button">GO!</a></li> -->
-            <li class="nav-item"><a href="coloring.html" id="go" class="button">GO!</a></li>
-          </ul>
-        </div>
+    <!-- Define angular application and controller -->
+    <body ng-app="coloringApp">
+      <!-- MAIN CONTENT & INJECTED VIEWS -->
+      <div class="app">
+        <div ng-view="" class="container"></div>
       </div>
 
-      <!-- Modal Window -->
-      <div class="modal">
-        <div class="modal-header">
-          About cuSTEMized
-        </div>
-        <div class="modal-content">
-          <p>Conaetsjfasdkjbfaksdjbf;lasdlfja;sdjfna sdfljasdfj nalsdfn ajlsdfjsad ,fnas;data</p>
-        </div>
-      </div>
-
-      <div class="cover">
-	  foobar
-      </div>
+      <!-- Scripts -->
+      <!-- <script type="text/javascript" src="cordova.js"></script> -->
+      <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/mojs/latest/mo.min.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

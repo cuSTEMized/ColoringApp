@@ -1,0 +1,25 @@
+.main {
+
+  .nav-item {
+    // font-size: 1.5rem;
+    font-size: 1rem;
+
+    #home {
+      background: $turquoise;
+      margin: 0 0 0 -1.5rem;
+      padding: 0 1rem;
+
+      i {
+        font-size: 1.5rem;
+        vertical-align: bottom;
+      }
+    }
+
+    #more {
+    }
+
+    &:last-child {
+      flex: 0 0 50%;
+    }
+  }
+}
